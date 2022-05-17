@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      href="https://www.bubt.edu.bd/assets/componats/new-image/fav.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
+</style>
+    <script
+      src="https://kit.fontawesome.com/06edb80a75.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>BUBT-School Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="myFunction()">
+    <div id="loading"></div>
+    <!-- NAVBAR START -->
+    <div class="mainHeader sticky-top">
+      <div class="container newHeader">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img src="./img/Logo.png" width="120px"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#event">Event</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Registration
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Regular" href="#">Regular Registration</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Alumni" href="#">Alumni Registration</a></li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Online Admission</a>
+                </li>
+                <li class="nav-item ms-3">
+                  <a id="login" class="nav-link" href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- MOdal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Name</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-id" class="col-form-label">ID</label>
+            <input type="text" class="form-control" id="recipient-id">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-id" class="col-form-label">Session</label>
+            <select class="form-select" aria-label="Default select example">
+  <option selected>Select Session</option>
+  <option value="1">1991-95</option>
+  <option value="2">1996-2000</option>
+  <option value="3">2001-05</option>
+</select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="snd-msg" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- NAVBAR START -->
+    <div class="container body1 mb-5">
+      <div class="notice">
+        <marquee
+          >সহশিক্ষা কার্যক্রমের অংশ হিসেবে ক্লাব বা সংগঠনে যুক্ত হলে যোগাযোগের
+          দক্ষতা তৈরি হয়, রিপোর্ট লেখা বা নিজের ভাবনা উপস্থাপনের কৌশল শেখা যায়।
+          দলের সঙ্গে কাজ করা, নেতৃত্ব দেওয়া, এসব দক্ষতাও মানুষ ক্লাব থেকেই শেখে।
+          বিশ্ববিদ্যালয়ের অনেক ক্লাব প্রোগ্রামিং, ফটোগ্রাফি, রোবটিকসের মতো
+          কারিগরি দক্ষতার চর্চাও করে। যদি এসব বিষয়ে আগ্রহ থাকে, তাহলে এ ধরনের
+          ক্লাবে অংশ নিয়ে সহজেই দক্ষতা রপ্ত করা যায়।</marquee
+        >
+      </div>
+      <div class="section1">
+        <div class="row">
+          <div
+            class="col-md-8 sliderSection"
+            data-aos="fade-right"
+            data-aos-delay="500"
+          >
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./img/slider/img2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./img/slider/img3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./img/slider/img1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-md-4 sidebar"
+            data-aos="fade-left"
+            data-aos-delay="500"
+          >
+            <h1 style="font-family: emoji" class="text-center">Notice</h1>
+            <div class="noti">
+              <ul>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <h4 style="display: inline">
+                      <div class="dot"></div>
+                      Notice 1
+                    </h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Adipisci, quo! Quidem esse ...
+                    </p>
+                  </a>
+                </li>
+                <hr />
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <h4 style="display: inline">
+                      <div class="dot"></div>
+                      Notice 2
+                    </h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Adipisci, quo! Quidem esse ...
+                    </p>
+                  </a>
+                </li>
+                <hr />
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <h4 style="display: inline">
+                      <div class="dot"></div>
+                      Notice 3
+                    </h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Adipisci, quo! Quidem esse ...
+                    </p>
+                  </a>
+                </li>
+                <hr />
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <div class="container">
+      <div class="uni-info card" id="about">
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="500">
+            <div class="card-title">
+              <h2>About BUBT</h2>
+            </div>
+            <div class="card-text">
+              <p>
+                Rajshahi Cantonment Board School & college, situated at Rajshahi
+                Cantonment, in the heart of Rajshahi city, also known as the
+                city of Education is a well reputed and rapidly growing
+                educational institution in Bangladesh. Established in 1986, it
+                has become a torch-bearer of education in this historic area of
+                Varandra. The institution is run by the Director General of
+                Directorate of Military Lands & Cantonments (DMLC), Ministry of
+                Defense under the vigilant supervision of the reverend Station
+                Commander, Rajshiahi Cantonment and direct guidance of
+                Cantonment Executive Officer (CEO), Rajshahi Cantonment Board.
+                With the active and ardent initiatives of Colonel MD Abdul Aziz
+                (late), the former education inclined Station Commandant of
+                Rajshahi Cantonment, the institute was set up as a Junior School
+                at the very beginning.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 mt-md-3"
+            data-aos="fade-down-left"
+            data-aos-delay="800"
+          >
+            <img src="./img/university.jpg" width="100%" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mb-3 bani">
+      <div class="col-md-4 col-6">
+        <div class="card text-center">
+          <img src="./img/chairman.png" class="rounded mx-auto d-block" width="50%" />
+          <div class="card-body">
+            <h5 class="card-title">The Chairman’s Message</h5>
+            <p class="card-text">
+              Rajshahi Cantonment Board School & college is a distinguished educational institution in Rajshahi
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-6 mb-sm-5">
+        <div class="card text-center">
+          <img src="./img/chairman.png" class="rounded mx-auto d-block" width="50%" />
+          <div class="card-body">
+            <h5 class="card-title">The Chairman’s Message</h5>
+            <p class="card-text">
+              Rajshahi Cantonment Board School & college is a distinguished educational institution in Rajshahi
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 ">
+        <div class="card">
+          <div class="card-body">
+            <iframe width="100%" style="margin-top: 43px" height="270" src="https://www.youtube.com/embed/uahho2VuuO4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container event" id="event">
+      <h3>Events</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center " data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+           <img src="./img/event/e3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <i class="fa fa-calendar-check-o text-primary mt-2" aria-hidden="true"> Publish Date : 20 Feb, 2019</i>
+            <h5 class="card-title">The Chairman’s Message</h5>
+            <p class="card-text">
+              Rajshahi Cantonment Board School & college is a distinguished educational institution in Rajshahi
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+           <img src="./img/event/e2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <i class="fa fa-calendar-check-o text-primary mt-2" aria-hidden="true"> Publish Date : 20 Feb, 2019</i>
+            <h5 class="card-title">The Chairman’s Message</h5>
+            <p class="card-text">
+              Rajshahi Cantonment Board School & college is a distinguished educational institution in Rajshahi
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+           <img src="./img/event/e1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <i class="fa fa-calendar-check-o text-primary mt-2" aria-hidden="true"> Publish Date : 20 Feb, 2019</i>
+            <h5 class="card-title">The Chairman’s Message</h5>
+            <p class="card-text">
+              Rajshahi Cantonment Board School & college is a distinguished educational institution in Rajshahi
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container footer " data-aos="fade-down"
+          data-aos-delay="200">
+      <div class="row">
+        <div class="col-md-4 links text-center">
+          <h4 style="border-bottom: 1px solid">IMPORTANT LINKS</h4>
+          <ul>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 links text-center">
+          <h4 style="border-bottom: 1px solid">IMPORTANT LINKS</h4>
+          <ul>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 links text-center">
+          <h4 style="border-bottom: 1px solid">IMPORTANT LINKS</h4>
+          <ul>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Bangladesh</a
+              >
+            </li>
+          </ul>
+        </div> -->
+
+        <section id="footer-area">
+          <div class="footer-area">
+              <div class="footer-wave-box">
+                  <div class="footer-wave footer-animation"></div>
+              </div>
+              <div class="main">
+                  <div class="footer">
+                      <div class="single-footer">
+                          <h4>about us</h4>
+                          <p>Lorem ipsum dolor sit amet, di dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Excepteur sint qui officia deserunt Excepteur.</p>
+                          <div class="footer-social">
+                              <a href=""><i class="fab fa-facebook-f"></i></a>
+                              <a href=""><i class="fab fa-twitter"></i></a>
+                              <a href=""><i class="fab fa-instagram"></i></a>
+                              <a href=""><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                      </div>
+                      <div class="single-footer">
+                          <h4>main menu</h4>
+                          <ul>
+                              <li><a href=""><i class="fas fa-chevron-right"></i> home</a></li>
+                              <li><a href=""><i class="fas fa-chevron-right"></i> about us</a></li>
+                              <li><a href=""><i class="fas fa-chevron-right"></i> services</a></li>
+                              <li><a href=""><i class="fas fa-chevron-right"></i> gallery</a></li>
+                              <li><a href=""><i class="fas fa-chevron-right"></i> contact us</a></li>
+                          </ul>
+                      </div>
+                      <div class="single-footer">
+                          <h4>quick links</h4>
+                          <ul>
+                              <li><a href=""><i class="fas fa-chevron-right"></i> privacy policy</a></li>
+                              <li><a href=""><i class="fas fa-chevron-right"></i> terms & conditions</a></li>
+                              <li><a href=""><i class="fas fa-chevron-right"></i> disclaimer</a></li>
+                          </ul>
+                      </div>
+                      <div class="single-footer">
+                          <h4>contact us</h4>
+                          <ul>
+                              <li><a href=""><i class="fas fa-map-marker-alt"></i> Rupnagor, Mirpur-2, Dhaka-1240</a></li>
+                              <li><a href=""><i class="fas fa-mobile-alt"></i> +88 0123 456 789</a></li>
+                              <li><a href=""><i class="far fa-envelope"></i> info@demo.com</a></li>
+                              <li><a href=""><i class="fas fa-globe-europe"></i> www.demo.com</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+    </div>
+    <footer class="container">
+      <p class="text-center">2022 &copy; Bangladesh University of Business And Technology (BUBT) . All Rights Reserved . Developed by TR101</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+		// $(document).ready(function(){
+			// 	$('div#loading').removeAttr('id');
+		// });
+		const preloader = document.getElementById("loading");
+		// window.addEventListener('load', function(){
+		// 	preloader.style.display = 'none';
+		// 	})
+
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', event => {
+  const button = event.relatedTarget
+  const recipient = button.getAttribute('data-bs-whatever')
+  const modalTitle = exampleModal.querySelector('.modal-title')
+  const submit = exampleModal.querySelector('#snd-msg')
+  
+  modalTitle.textContent = `${recipient} Registration`
+})
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
